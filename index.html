@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>For You, Always</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- MUSIC BUTTON -->
+  <button class="music-btn" id="musicBtn" aria-label="Play our song">
+    <svg class="music-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+      <path d="M9 18V5l12-2v13"/>
+      <circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/>
+    </svg>
+    <span class="music-label">Our Song</span>
+  </button>
+
+  <!-- ═══════════════════════════════════════
+       HERO
+  ═══════════════════════════════════════ -->
+  <section class="hero" id="hero">
+    <canvas id="particleCanvas"></canvas>
+    <div class="hero-glow"></div>
+
+    <div class="hero-layout">
+      <div class="hero-content">
+        <p class="eyebrow animate-1">Made only for you</p>
+        <h1 class="hero-title animate-2">
+          For the most<br />
+          <em>beautiful part</em><br />
+          of my life
+        </h1>
+        <p class="hero-sub animate-3">A little place on the internet made only for you</p>
+        <a href="#counter" class="cta-btn animate-4">
+          <span>Open My Heart</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+      </div>
+
+      <div class="hero-photo-wrap animate-5">
+        <div class="hero-photo-frame">
+          <div class="hero-photo-inner">
+             <img src="image/sush-photo.jpeg" alt="Us" /> 
+            <div class="photo-placeholder">
+              <svg viewBox="0 0 60 60" fill="none" stroke="currentColor" stroke-width="1">
+                <rect x="10" y="14" width="40" height="32" rx="2"/>
+                <circle cx="30" cy="28" r="7"/>
+                <path d="M10 38 l10-8 8 6 8-10 14 12"/>
+              </svg>
+              <span>Your photo here</span>
+            </div>
+          </div>
+          <div class="frame-corner tl"></div>
+          <div class="frame-corner tr"></div>
+          <div class="frame-corner bl"></div>
+          <div class="frame-corner br"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="scroll-cue">
+      <div class="scroll-cue-line"></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       DAYS COUNTER
+  ═══════════════════════════════════════ -->
+  <section class="counter-section" id="counter">
+    <div class="counter-wrap reveal">
+      <p class="counter-eyebrow">Days since you became my favorite person</p>
+      <div class="counter-display">
+        <span class="counter-num" id="dayCounter">0</span>
+      </div>
+      <p class="counter-sub">and every single day, each one has been a gift</p>
+      <div class="counter-date-note">Since 13 July 2016</div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       OUR STORY
+  ═══════════════════════════════════════ -->
+  <section class="story-section" id="story">
+    <div class="story-intro">
+      <p class="section-eyebrow reveal">Our Story</p>
+      <h2 class="section-heading reveal">
+        The story of<br /><em>how you found me</em>
+      </h2>
+      <div class="gold-rule reveal"></div>
+    </div>
+
+    <div class="story-timeline">
+
+      <div class="story-item reveal">
+        <div class="story-marker">
+          <span class="story-num">01</span>
+          <div class="story-line"></div>
+        </div>
+        <div class="story-body">
+          <h3>The First Time I Saw You</h3>
+          <p>The first time I saw her was in church. In that moment, something inside me paused. It felt like time slowed down, and I was completely frozen just looking at her. I didn't understand what I felt — but I knew it was something special.</p>
+        </div>
+      </div>
+
+      <div class="story-item reveal">
+        <div class="story-marker">
+          <span class="story-num">02</span>
+          <div class="story-line"></div>
+        </div>
+        <div class="story-body">
+          <h3>When Life Gave Me A Chance</h3>
+          <p>Days passed, and I kept wanting to meet her, but I never got the chance. Still, life gave me another opportunity during youth camp. That was the moment I finally gathered the courage to talk to her.</p>
+        </div>
+      </div>
+
+      <div class="story-item reveal">
+        <div class="story-marker">
+          <span class="story-num">03</span>
+          <div class="story-line"></div>
+        </div>
+        <div class="story-body">
+          <h3>The No That Didn't End My Love</h3>
+          <p>When I first confessed my feelings, she said no. And honestly, that could have been the end. But something in my heart refused to let her go. Because from the very beginning, I saw her as someone I could build a future with. I saw her as the one I wanted to grow old with.</p>
+        </div>
+      </div>
+
+      <div class="story-item reveal">
+        <div class="story-marker">
+          <span class="story-num">04</span>
+          <div class="story-line"></div>
+        </div>
+        <div class="story-body">
+          <h3>When You Said Yes</h3>
+          <p>And then one day, everything changed. She said yes. That one moment made my life brighter in ways I can't explain. Since then, life has felt warmer, happier, and more meaningful.</p>
+        </div>
+      </div>
+
+      <div class="story-item reveal">
+        <div class="story-marker">
+          <span class="story-num">05</span>
+          <div class="story-line"></div>
+        </div>
+        <div class="story-body">
+          <h3>Our Journey</h3>
+          <p>I still remember the days we texted, met after her classes, walked down the roads together, laughed, talked, and shared moments that felt like pure happiness. Those simple moments became some of the happiest memories of my life. We first met on 13 July 2016 — and today, the journey is still going.</p>
+        </div>
+      </div>
+
+      <div class="story-item reveal">
+        <div class="story-marker">
+          <span class="story-num">06</span>
+        </div>
+        <div class="story-body">
+          <h3>Through Everything</h3>
+          <p>We've had our ups and downs. Life hasn't always been easy. But even in the hardest times, life has remained beautiful with her. And even now, my prayer is the same — that what we have never fades away.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       REASONS I LOVE YOU
+  ═══════════════════════════════════════ -->
+  <section class="reasons-section" id="reasons">
+    <div class="reasons-intro">
+      <p class="section-eyebrow reveal">Why I Love You</p>
+      <h2 class="section-heading reveal">The reasons are<br /><em>endless</em> — but here are a few</h2>
+    </div>
+    <div class="reasons-grid">
+
+      <div class="reason-card reveal">
+        <div class="reason-glyph">✦</div>
+        <h3>Your Smile</h3>
+        <p>The way it reaches your eyes before your lips. It still has the power to stop my world.</p>
+      </div>
+
+      <div class="reason-card reveal">
+        <div class="reason-glyph">✦</div>
+        <h3>Your Heart</h3>
+        <p>The way you care, love, and carry so much softness inside you makes you beautiful in a way words can't explain.</p>
+      </div>
+
+      <div class="reason-card reveal">
+        <div class="reason-glyph">✦</div>
+        <h3>The Way You Care</h3>
+        <p>You notice the little things, remember what matters, and make love feel safe.</p>
+      </div>
+
+      <div class="reason-card reveal">
+        <div class="reason-glyph">✦</div>
+        <h3>The Peace You Bring</h3>
+        <p>Even on the hardest days, your presence has always made life feel lighter.</p>
+      </div>
+
+      <div class="reason-card reveal">
+        <div class="reason-glyph">✦</div>
+        <h3>Your Beautiful Madness</h3>
+        <p>Your laughter, your chaos, your depth, your little moods — every part of you feels unforgettable to me.</p>
+      </div>
+
+      <div class="reason-card reveal">
+        <div class="reason-glyph">✦</div>
+        <h3>How You Make Life Beautiful</h3>
+        <p>You turned ordinary moments into memories and made life feel warmer, softer, and worth holding onto.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       SCROLLING PHOTO BANNER
+  ═══════════════════════════════════════ -->
+  <section class="photo-banner-section">
+    <div class="banner-track-wrap">
+      <div class="banner-track" id="bannerTrack">
+        <!-- original set -->
+        <div class="banner-slide"><div class="banner-photo"><img src="image/togther/photo 1.jpeg" alt="Us" /></div></div>
+        <div class="banner-slide"><div class="banner-photo"><img src="image/togther/photo 2.jpeg" alt="Us" /></div></div>
+        <div class="banner-slide"><div class="banner-photo"><img src="image/togther/photo 3.jpeg" alt="Us" /></div></div>
+        <div class="banner-slide"><div class="banner-photo"><img src="image/togther/photo 4.jpeg" alt="Us" /></div></div>
+        <div class="banner-slide"><div class="banner-photo"><img src="image/togther/photo 5.jpeg" alt="Us" /></div></div>
+        <div class="banner-slide"><div class="banner-photo"><img src="image/togther/photo 6.jpeg" alt="Us" /></div></div>
+        <div class="banner-slide"><div class="banner-photo"><img src="image/togther/photo 7.jpeg" alt="Us" /></div></div>
+        <div class="banner-slide"><div class="banner-photo"><img src="image/togther/photo 8.jpeg" alt="Us" /></div></div>
+        <!-- duplicate for seamless infinite loop -->
+        <div class="banner-slide" aria-hidden="true"><div class="banner-photo"><img src="image/togther/photo 1.jpeg" alt="" /></div></div>
+        <div class="banner-slide" aria-hidden="true"><div class="banner-photo"><img src="image/togther/photo 2.jpeg" alt="" /></div></div>
+        <div class="banner-slide" aria-hidden="true"><div class="banner-photo"><img src="image/togther/photo 3.jpeg" alt="" /></div></div>
+        <div class="banner-slide" aria-hidden="true"><div class="banner-photo"><img src="image/togther/photo 4.jpeg" alt="" /></div></div>
+        <div class="banner-slide" aria-hidden="true"><div class="banner-photo"><img src="image/togther/photo 5.jpeg" alt="" /></div></div>
+        <div class="banner-slide" aria-hidden="true"><div class="banner-photo"><img src="image/togther/photo 6.jpeg" alt="" /></div></div>
+        <div class="banner-slide" aria-hidden="true"><div class="banner-photo"><img src="image/togther/photo 7.jpeg" alt="" /></div></div>
+        <div class="banner-slide" aria-hidden="true"><div class="banner-photo"><img src="image/togther/photo 8.jpeg" alt="" /></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       MEMORY GALLERY
+  ═══════════════════════════════════════ -->
+  <section class="gallery-section" id="gallery">
+    <div class="gallery-intro">
+      <p class="section-eyebrow reveal">Our Memories</p>
+      <h2 class="section-heading reveal">Moments I never<br /><em>want to forget</em></h2>
+    </div>
+
+    <div class="gallery-grid">
+      <div class="polaroid reveal" style="--rot: -2.2deg; --delay: 0ms">
+        <div class="polaroid-img"><img src="image/S3.jpeg" alt="" /> </div>
+        <p class="polaroid-cap">"That evening I'll never forget"</p>
+      </div>
+      <div class="polaroid reveal" style="--rot: 1.4deg; --delay: 60ms">
+        <div class="polaroid-img"> <img src="image/Sc.jpeg" alt="" /></div>
+        <p class="polaroid-cap">"Laughing at nothing, happy about everything"</p>
+      </div>
+      <div class="polaroid reveal" style="--rot: -1deg; --delay: 120ms">
+        <div class="polaroid-img"><img src="image/S1.jpeg" alt="" /> </div>
+        <p class="polaroid-cap">"The quiet ones are the best ones"</p>
+      </div>
+      <div class="polaroid reveal" style="--rot: 2.5deg; --delay: 180ms">
+        <div class="polaroid-img"><img src="image/S4.jpeg" alt="" /> </div>
+        <p class="polaroid-cap">"A memory I'd relive forever"</p>
+      </div>
+      <div class="polaroid reveal" style="--rot: -1.8deg; --delay: 240ms">
+        <div class="polaroid-img"> <img src="image/sush-photo.jpeg" alt="" /> </div>
+        <p class="polaroid-cap">"My favorite view"</p>
+      </div>
+      <div class="polaroid reveal" style="--rot: 1deg; --delay: 300ms">
+        <div class="polaroid-img"> <img src="image/SU.jpeg" alt="" /> </div>
+        <p class="polaroid-cap">"Us, in our little world"</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       LOVE LETTER
+  ═══════════════════════════════════════ -->
+  <section class="letter-section" id="letter">
+    <p class="section-eyebrow reveal" style="text-align:center">A Letter</p>
+    <div class="letter-card reveal">
+      <div class="letter-ornament top">✦</div>
+      <p class="letter-date">Written with love</p>
+      <h2 class="letter-salutation">To you,<br /><em>Guni </em></h2>
+      <div class="letter-divider"></div>
+      <div class="letter-body">
+        <p>There are things I've tried to say so many times, but never found the right words. So I'm writing them here.</p>
+        <p>You came into my life and changed it in ways I never expected. Not because you fixed anything — but because with you, everything just felt right.</p>
+        <p>I still remember how everything began… the first time I saw you, the moments I waited just to talk to you, and even the times I thought I might lose you. But somehow, we found our way.</p>
+        <p>We've had our ups and downs, and life hasn't always been easy. But even in the hardest times, life has remained beautiful with you in it.</p>
+        <p>I pray that what we have never fades. That no matter what happens, we stand beside each other — in our strongest and weakest moments.</p>
+        <p>And in the end, I just want one thing… to grow old with you — with love, laughter, fights, care, and everything in between.</p>
+      </div>
+      <p class="letter-sign">Forever yours,<br /><em>Bunny</em></p>
+      <div class="letter-ornament bottom">✦</div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       FINAL SURPRISE
+  ═══════════════════════════════════════ -->
+  <section class="finale-section" id="finale">
+    <div class="finale-bg-word">forever</div>
+    <div class="finale-content">
+      <p class="section-eyebrow reveal">One more thing…</p>
+      <h2 class="finale-heading reveal">Before you go,<br /><em>there's something left</em></h2>
+      <button class="reveal-btn reveal" id="revealBtn">
+        <span>One Last Thing…</span>
+      </button>
+      <div class="final-message" id="finalMessage">
+        <div class="final-msg-inner">
+          <span class="quote-mark open">"</span>
+          <p class="final-quote">
+            If I had to choose again,<br />
+            in every lifetime,<br />
+            I would still choose <em>you</em>.
+          </p>
+          <span class="quote-mark close">"</span>
+          <p class="final-sig">— Always &amp; forever, <em>Guni & Bunny</em></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════ -->
+  <footer class="site-footer">
+    <div class="footer-glyph">✦</div>
+    <p>Made with love, for <em>Sushmita Daimari</em></p>
+    <p class="footer-sub">Aman Sona &nbsp;·&nbsp; 2026</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
