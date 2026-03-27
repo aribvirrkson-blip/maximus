@@ -200,12 +200,12 @@ document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 
   window.onYouTubeIframeAPIReady = function () {
     new YT.Player('ytPlayer', {
-      videoId: 'BXNQ1bWUDjo',
+      videoId: '8kz3OhBC-DI',
       playerVars: {
         autoplay: 1,
         mute: 1,
         loop: 1,
-        playlist: 'BXNQ1bWUDjo',
+        playlist: '8kz3OhBC-DI',
         controls: 0,
         showinfo: 0,
         rel: 0,
