@@ -154,59 +154,37 @@ document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 (function initMusic() {
   const btn   = document.getElementById('musicBtn');
   const label = btn?.querySelector('.music-label');
-  const icon  = btn?.querySelector('.music-icon');
   if (!btn) return;
 
-  const audio = new Audio('music/Xopun.mp3');
+  const audio  = new Audio('music/Xopun.mp3');
   audio.loop   = true;
   audio.volume = 0.7;
+  audio.muted  = true;
 
-  // --- autoplay muted (bypasses browser block) ---
-  audio.muted = true;
-  audio.play().catch(() => {
-    // autoplay blocked entirely — wait for first click
-    audio.muted = false;
-  });
+  // try silent autoplay
+  audio.play().catch(() => {});
 
-  // update button to show it's playing (muted)
   label.textContent = 'Tap for Sound';
   btn.classList.add('playing');
 
-  let muted = true;
+  let unmuted = false;
 
   btn.addEventListener('click', () => {
-    if (muted) {
-      // first click: unmute
+    if (!unmuted) {
+      // first tap — unmute and ensure playing
       audio.muted = false;
-      muted = false;
+      unmuted = true;
+      audio.play().catch(() => {});
       label.textContent = 'Playing…';
-      btn.title = 'Pause song';
+      btn.classList.add('playing');
     } else if (!audio.paused) {
-      // pause
       audio.pause();
       label.textContent = 'Our Song';
       btn.classList.remove('playing');
-      btn.title = 'Play song';
     } else {
-      // resume
-      audio.play();
+      audio.play().catch(() => {});
       label.textContent = 'Playing…';
       btn.classList.add('playing');
-      btn.title = 'Pause song';
     }
   });
-
-  // if autoplay was blocked, start on first user interaction anywhere
-  function startOnInteraction() {
-    audio.muted = false;
-    audio.play().then(() => {
-      muted = false;
-      label.textContent = 'Playing…';
-      btn.classList.add('playing');
-    }).catch(() => {});
-    document.removeEventListener('click', startOnInteraction);
-    document.removeEventListener('touchstart', startOnInteraction);
-  }
-  document.addEventListener('click', startOnInteraction, { once: true });
-  document.addEventListener('touchstart', startOnInteraction, { once: true });
 })();
